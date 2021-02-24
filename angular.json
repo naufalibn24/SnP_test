@@ -3,6 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "snptest": {
       "projectType": "application",
       "schematics": {
@@ -13,10 +14,19 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+=======
+    "demo": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/snptest",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -33,6 +43,21 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+=======
+            "outputPath": "dist/demo",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
           },
           "configurations": {
             "production": {
@@ -45,6 +70,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+<<<<<<< HEAD
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -61,24 +87,44 @@
                   "maximumError": "4kb"
                 }
               ]
+=======
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "snptest:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "snptest:build:production"
+=======
+            "browserTarget": "demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo:build:production"
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "snptest:build"
+=======
+            "browserTarget": "demo:build"
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
           }
         },
         "test": {
@@ -86,17 +132,31 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
+<<<<<<< HEAD
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": []
+=======
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
+<<<<<<< HEAD
               "tsconfig.app.json",
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
@@ -114,10 +174,23 @@
             "production": {
               "devServerTarget": "snptest:serve:production"
             }
+=======
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
           }
         }
       }
     }
   },
+<<<<<<< HEAD
   "defaultProject": "snptest"
 }
+=======
+  "defaultProject": "demo"
+}
+>>>>>>> e8d6f6397c15279983c3f441e396abb402aeea3d
