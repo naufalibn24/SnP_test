@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-between">
+  <h3>Activity</h3>
+  <p class="mt-2 font-weight-light">
+    <a href="#"> View Timeline</a>/ <a href="#"> Filter Activity</a>
+  </p>
+</div>
+<div class="list-group border-bottom border-top" *ngFor="let datas of data">
+  <a
+    href="#"
+    class="list-group-item list-group-item-action flex-row border-0 d-flex primary-background text-white"
+  >
+    <div class="div-template-avatar secondary-background">
+      <img
+        src="{{ datas.picture }}"
+        style="max-width: 100%; max-height: 100%"
+      />
+    </div>
+    <div class="ml-3">
+      <div class="d-flex w-100 justify-content-start">
+        <small class="font-weight-bold"
+          >{{ datas.firstName }}
+          <span class="font-weight-light">commented</span>
+        </small>
+      </div>
+      <small class="font-weight-light">{{ datas.email }}</small>
+      <br />
+      <small>2 Seconds ago.</small>
+    </div>
+  </a>
+</div>
